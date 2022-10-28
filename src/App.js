@@ -4,7 +4,7 @@ import Gallery from './components/Gallery'
 import SearchBar from './components/Searchbar'
 import AlbumView from './components/AlbumView'
 import ArtistView from './components/ArtistView'
-import { Fragment } from 'react/cjs/react.production.min'
+import { Fragment, default as React } from 'react'
 
 function App() {
 	let [search, setSearch] = useState('')
@@ -40,7 +40,7 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path="/" element={
-						<Fragment>
+						<Fragment> 
 							<SearchBar handleSearch = {handleSearch}/>
 							<Gallery data={data} />
 						</Fragment>
